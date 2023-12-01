@@ -1,0 +1,13 @@
+
+  @if (auth.currentUserSig()) {
+    {{auth.currentUserSig().email|json}}
+    <button type="button" (click)="logout()">logout</button>
+  }
+  @else {
+    <app-login></app-login>
+  }
+  <button type="button" (click)="testAuth()">TestAuth</button>
+
+
+
+<router-outlet></router-outlet>
