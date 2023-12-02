@@ -1,6 +1,6 @@
 import { Component, signal, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { AuthService } from './shared/service/auth.service';
 import { LoginComponent } from './account/login/login.component';
 interface IUser{
@@ -11,7 +11,7 @@ interface IUser{
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,LoginComponent],
+  imports: [CommonModule, RouterOutlet,LoginComponent,RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

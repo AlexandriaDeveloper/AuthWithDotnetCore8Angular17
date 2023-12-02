@@ -1,13 +1,39 @@
 
+
+
+<div class=" content">
+  <div class="header">
+    <div class="navbar">
+      @if (auth.currentUserSig()) {
+        اهلا : {{auth.currentUserSig().displayName}}
+        <button type="button" (click)="logout()">logout</button>
+      }
+      @else {
+        <button type="button" [routerLink]="['/account/login']" routerLinkActive="router-link-active" >login</button>
+      }
+    </div>
+  </div>
+  <div class="body">
+
+    <router-outlet></router-outlet>
+  </div>
+  <div class="footer">
+
+  </div>
+</div>
+
+
+
+
+
+<!--
   @if (auth.currentUserSig()) {
-    {{auth.currentUserSig().email|json}}
-    <button type="button" (click)="logout()">logout</button>
-  }
-  @else {
-    <app-login></app-login>
-  }
-  <button type="button" (click)="testAuth()">TestAuth</button>
+      {{auth.currentUserSig().email|json}}
+      <button type="button" (click)="logout()">logout</button>
+    }
+    @else {
+      <app-login></app-login>
+    }
+    <button type="button" (click)="testAuth()">TestAuth</button>
 
-
-
-<router-outlet></router-outlet>
+-->

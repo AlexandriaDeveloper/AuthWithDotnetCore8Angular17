@@ -11,4 +11,16 @@ namespace Api.DTOs
         public string Password { get; set; }
 
     }
+
+    public class RoleDto
+    {
+        public string Name { get; set; }
+    }
+
+    public class ChangePasswordDto
+    {
+        public string OldPassword { get; set; }
+        public string NewPassword { get; set; }
+    }
+
 }
